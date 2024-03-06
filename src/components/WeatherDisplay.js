@@ -1,6 +1,6 @@
-// WeatherDisplay.jsx
-import React, { useState } from 'react';
-import { Card, CardHeader, CardBody, CardText, ListGroup, ListGroupItem } from 'reactstrap';
+
+import React from 'react';
+import { Card, CardHeader, CardBody, CardText } from 'reactstrap';
 
 const WeatherDisplay = ({ weatherData, isCelsius }) => {
   if (!weatherData) {

@@ -1,5 +1,5 @@
-// App.jsx
-import React, { useState, useEffect } from 'react';
+
+import React, { useState } from 'react';
 import weatherService from './components/weatherService';
 import WeatherDisplay from './components/WeatherDisplay';
 import SearchForm from './components/SearchForm';
@@ -8,7 +8,7 @@ import './App.css';
 const App = () => {
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
-  const [isCelsius, setIsCelsius] = useState(true); // Default unit is Celsius
+  const [isCelsius, setIsCelsius] = useState(true); 
 
   const handleSearch = async (location) => {
     try {
@@ -20,14 +20,6 @@ const App = () => {
     }
   };
 
-  useEffect(() => {
-    // Fetch weather for user's current location on app load
-    navigator.geolocation.getCurrentPosition((position) => {
-      const lat = position.coords.latitude;
-      const lon = position.coords.longitude;
-      handleSearch(`${lat},${lon}`);
-    }, (error) => setError(error.message));
-  }, []);
 
   return (
     <div className="App">

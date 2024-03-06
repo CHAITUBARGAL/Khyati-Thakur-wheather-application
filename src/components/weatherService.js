@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_KEY = 'e286577a87f5a1c9b089a11c6506f0c4'; // Replace with your actual API key
+const API_KEY = 'e286577a87f5a1c9b089a11c6506f0c4';
 
 const weatherService = {
   getWeather: async (location) => {
